@@ -18,7 +18,8 @@ Installation of the MYNT EYE D SDK and the mynt eye ros wrapper
 
 LINK: https://github.com/slightech/MYNT-EYE-D-SDK
 
-# The following Setup can be completed manually, otherwise the edited files are provided for your convenience Simply clone repo and copy files to destination paths detailed below
+# The following Setup can be completed manually, otherwise the edited files are provided for your convenience
+Simply copy files into the directories descirbed below
 
 
 # Setup of MYNT-EYE-D-SDK for rtabmap_ros
