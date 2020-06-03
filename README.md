@@ -14,7 +14,7 @@ Source Install of rtabmap_ros
 
 LINK: https://github.com/introlab/rtabmap_ros
 
-Install of the MYNT EYE D SDK and build the mynt eye ros wrapper
+Installation of the MYNT EYE D SDK and the mynt eye ros wrapper
 
 LINK: https://github.com/slightech/MYNT-EYE-D-SDK
 
