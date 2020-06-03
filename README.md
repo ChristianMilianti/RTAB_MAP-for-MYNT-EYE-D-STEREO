@@ -5,6 +5,10 @@ Repository for using the MYNT EYE D Stereo Camera with RTAB MAP in ROS (Currentl
 
 The following assumes you have basic familiarity with ROS, have a catkin_ws and are familiar with catkin-tools
 
+
+![GitHub Logo](/field_test1_isometric.png)
+
+
 # Prerequisites
 Installation of ROS Melodic 
 
