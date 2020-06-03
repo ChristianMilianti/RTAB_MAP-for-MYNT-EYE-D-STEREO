@@ -1,6 +1,6 @@
 
 
-# RTAB_MAP-for-MYNT-EYE-D-STEREO
+# RTAB MAP for MYNT EYE D STEREO
 Repository for using the MYNT EYE D Stereo Camera with RTAB MAP in ROS (Currently only supports MYNT S Stereo Camera) for handheld stereo mapping 
 
 The following assumes you have basic familiarity with ROS, have a catkin_ws and are familiar with catkin-tools
