@@ -18,8 +18,10 @@ Installation of the MYNT EYE D SDK and the mynt eye ros wrapper
 
 LINK: https://github.com/slightech/MYNT-EYE-D-SDK
 
+# The following Setup can be completed manually, otherwise the edited files are provided for your convenience Simply clone repo and copy files to destination paths detailed below
 
-# Setup of MYNT-EYE-D-SDK for rtabmap_ros (REQUIRED)
+
+# Setup of MYNT-EYE-D-SDK for rtabmap_ros
 
 in the [rtabmap_ros wiki](http://wiki.ros.org/rtabmap_ros/Tutorials/StereoHandHeldMapping#Note) there is mention of an issue wih right camera info (for the mynt eye s stereo varian) value which is based in mm instead of meters. 
 
@@ -48,7 +50,7 @@ finally put the provided "RTAB_mynteye.launch" file into the following directory
 Path: ~/MYNT-EYE-D-SDK/wrappers/ros/src/mynteye_wrapper_d/launch/RTAB_mynteye.launch
 
 
-# Add the provided launch file to rtabmap_ros package (REQUIRED)
+# Add the provided launch file to rtabmap_ros package
 Copy the provided file to the following directory 
 
 ~/catkin_ws/src/rtabmap_ros/launch/rtabmap_mynt.launch
@@ -89,5 +91,6 @@ roslaunch rtabmap_ros rtabmap_mynt.launch \
    right_camera_info_topic:=/mynteye/right_rect/camera_info \
    frame_id:=mynteye_link_frame \
    rtabmap_args:="-d"
+
 
 
