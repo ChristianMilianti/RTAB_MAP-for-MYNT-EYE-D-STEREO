@@ -55,10 +55,10 @@ finally put the provided "RTAB_mynteye.launch" file into the following directory
 Path: ~/MYNT-EYE-D-SDK/wrappers/ros/src/mynteye_wrapper_d/launch/RTAB_mynteye.launch
 
 
-# Add the provided launch file to rtabmap_ros package
-Copy the provided file to the following directory 
+# Replace the provided launch file with the one in the launch folder of the rtabmap_ros package
+Copy the provided file to the following directory This is an edited version of the launch file customised to suit the mynt stereo camera
 
-~/catkin_ws/src/rtabmap_ros/launch/rtabmap_mynt.launch
+~/catkin_ws/src/rtabmap_ros/launch/rtabmap.launch
 
 # Usage 
 Open three termnial windows 
@@ -77,7 +77,7 @@ Terminal 3:
 
 Run this for colour:
 
-roslaunch rtabmap_ros rtabmap_mynt.launch \
+roslaunch rtabmap_ros rtabmap.launch \
    stereo:=true \
    left_image_topic:=/mynteye/left_rect/image_rect_color \
    right_image_topic:=/mynteye/right_rect/image_rect_color \
@@ -88,7 +88,7 @@ roslaunch rtabmap_ros rtabmap_mynt.launch \
    
   OR this for monochrome SLAM
   
-  roslaunch rtabmap_ros rtabmap_mynt.launch \
+  roslaunch rtabmap_ros rtabmap.launch \
    stereo:=true \
    left_image_topic:=/mynteye/left_rect/image_rect \
    right_image_topic:=/mynteye/right_rect/image_rect \
