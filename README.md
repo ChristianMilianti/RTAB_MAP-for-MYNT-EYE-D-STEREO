@@ -79,14 +79,7 @@ Terminal 3:
 
 Run this for colour:
 
-roslaunch rtabmap_ros rtabmap.launch \
-   stereo:=true \
-   left_image_topic:=/mynteye/left_rect/image_rect_color \
-   right_image_topic:=/mynteye/right_rect/image_rect_color \
-   left_camera_info_topic:=/mynteye/left_rect/camera_info \
-   right_camera_info_topic:=/mynteye/right_rect/camera_info \
-   frame_id:=mynteye_link_frame \
-   rtabmap_args:="-d"
+roslaunch rtabmap_ros rtabmap.launch    stereo:=true    left_image_topic:=/mynteye/left_rect/image_rect_color    right_image_topic:=/mynteye/right_rect/image_rect_color    left_camera_info_topic:=/mynteye/left_rect/camera_info    right_camera_info_topic:=/mynteye/right_rect/camera_info    frame_id:=mynteye_link_frame    rtabmap_args:="-d"
    
   OR this for monochrome SLAM
   
