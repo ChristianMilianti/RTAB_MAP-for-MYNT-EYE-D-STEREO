@@ -73,7 +73,7 @@ cd MYNT-EYE-D-SDK -run this first
 
   cd ~/MYNT-EYE-D-SDK/wrappers/ros/src/mynteye_wrapper_d/launch/ -run this third
 
-roslaunch RTAB_mynteye.launch
+roslaunch RTAB_mynteye.launch - run this fourth
 
 Terminal 3:
 
