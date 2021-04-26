@@ -68,8 +68,10 @@ roscore
 
 Terminal 2:
 cd MYNT-EYE-D-SDK -run this first
-source ./wrappers/ros/devel/setup.bash - run this second
-cd ~/MYNT-EYE-D-SDK/wrappers/ros/src/mynteye_wrapper_d/launch/ -run this third
+
+ source ./wrappers/ros/devel/setup.bash - run this second
+
+  cd ~/MYNT-EYE-D-SDK/wrappers/ros/src/mynteye_wrapper_d/launch/ -run this third
 
 roslaunch RTAB_mynteye.launch
 
