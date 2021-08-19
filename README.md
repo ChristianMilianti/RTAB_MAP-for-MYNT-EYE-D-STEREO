@@ -73,9 +73,10 @@ cd Documents/MYNT-EYE-D-SDK -run this first
 
   cd wrappers/ros/src/mynteye_wrapper_d/launch/ -run this third
 
-roslaunch RTAB_mynteye.launch - run this fourth
+roslaunch RTAB_mynteye.launch - run this fourth, (this 'turns on the camera' and starts publishing the topics depending on what is specified within the RTAB_mynteye.launch file.
 
 Terminal 3:
+These next steps launch rtabmap, with the required parameters in order to work with the data being published by the mynt eye camera.
 
 Run this for colour:
 
