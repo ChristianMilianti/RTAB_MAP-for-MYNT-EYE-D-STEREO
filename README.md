@@ -73,28 +73,26 @@ cd Documents/MYNT-EYE-D-SDK -run this first
 
   cd wrappers/ros/src/mynteye_wrapper_d/launch/ -run this third
 
-roslaunch RTAB_mynteye.launch - run this fourth, (this 'turns on the camera' and starts publishing the topics depending on what is specified within the RTAB_mynteye.launch file.)
+roslaunch RTAB_mynteye.launch - run this fourth, (this 'turns on the camera' and starts publishing the topics depending on what is specified within the RTAB_mynteye.launch file. - make sure the camera is plugged in)
 
 
 If you want to do a shortcut use the following: cd Documents/MYNT-EYE-D-SDK && source ./wrappers/ros/devel/setup.bash && roslaunch mynteye_wrapper_d RTAB_mynteye_backup.launch
 
-Terminal 3:
-These next steps launch rtabmap, with the required parameters in order to work with the data being published by the mynt eye camera.
+Terminal 3: Launch the SBG Driver - make sure the sbg is plugged in...
+sudo chmod 666 /dev/ttyUSB0
 
-Run this for colour:
+roslaunch sbg_driver sbg_ellipseN.launch
 
-roslaunch rtabmap_ros rtabmap.launch    stereo:=true    left_image_topic:=/mynteye/left_rect/image_rect_color    right_image_topic:=/mynteye/right_rect/image_rect_color    left_camera_info_topic:=/mynteye/left_rect/camera_info    right_camera_info_topic:=/mynteye/right_rect/camera_info    frame_id:=mynteye_link_frame    rtabmap_args:="-d"
+if driver fails to launch due to 
+
+
+Terminal 4:
+These next steps launch rtabmap, with the required parameters in order to work with the data being published by the mynt eye camera and sbg.
+
    
-  OR this for monochrome SLAM
-  
-  roslaunch rtabmap_ros rtabmap.launch \
-   stereo:=true \
-   left_image_topic:=/mynteye/left_rect/image_rect \
-   right_image_topic:=/mynteye/right_rect/image_rect \
-   left_camera_info_topic:=/mynteye/left_rect/camera_info \
-   right_camera_info_topic:=/mynteye/right_rect/camera_info \
-   frame_id:=mynteye_link_frame \
-   rtabmap_args:="-d"
+Run this for colour and SBG:
+roslaunch rtabmap_ros rtabmap.launch stereo:=true left_image_topic:=/mynteye/left_rect/image_rect_color right_image_topic:=/mynteye/right_rect/image_rect_color left_camera_info_topic:=/mynteye/left_rect/camera_info right_camera_info_topic:=/mynteye/right_rect/camera_info frame_id:=mynteye_link_frame gps_topic:=/imu/nav_sat_fix rtabmap_args:="-d"
+
 
 
 
