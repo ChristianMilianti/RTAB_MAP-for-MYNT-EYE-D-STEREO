@@ -79,11 +79,11 @@ roslaunch RTAB_mynteye.launch - run this fourth, (this 'turns on the camera' and
 If you want to do a shortcut use the following: cd Documents/MYNT-EYE-D-SDK && source ./wrappers/ros/devel/setup.bash && roslaunch mynteye_wrapper_d RTAB_mynteye_backup.launch
 
 Terminal 3: Launch the SBG Driver - make sure the sbg is plugged in...
-sudo chmod 666 /dev/ttyUSB0
+
 
 roslaunch sbg_driver sbg_ellipseN.launch
 
-if driver fails to launch due to 
+if driver fails to launch - do this sudo chmod 666 /dev/ttyUSB0
 
 
 Terminal 4:
@@ -94,5 +94,11 @@ Run this for colour and SBG:
 roslaunch rtabmap_ros rtabmap.launch stereo:=true left_image_topic:=/mynteye/left_rect/image_rect_color right_image_topic:=/mynteye/right_rect/image_rect_color left_camera_info_topic:=/mynteye/left_rect/camera_info right_camera_info_topic:=/mynteye/right_rect/camera_info frame_id:=mynteye_link_frame gps_topic:=/imu/nav_sat_fix rtabmap_args:="-d"
 
 
+to record data:
+rosbag record rosout tf /darknet_ros_3d/bounding_boxes /darknet_ros_3d/markers /mynteye/depth/camera_info /mynteye/depth/image_raw /mynteye/imu/data_raw /mynteye/points/data_raw /mynteye/right_rect/image_rect_color /mynteye/right_rect/camera_info /mynteye/left_rect/camera_info /mynteye/left_rect/image_rect_color /mynteye/temp/data_raw /rosout /rosout_agg /imu/data /imu/nav_sat_fix /rtabmap/grid_map /rtabmap/grid_prob_map /rtabmap/odom /rtabmap/odom_info /rtabmap/cloud_ground /rtabmap/cloud_map /rtabmap/cloud_obstacles /rtabmap/proj_map /rtabmap/scan_map
+
+if you want it to be less resource heavy- try the following
+
+rosbag record rosout tf /darknet_ros_3d/bounding_boxes /mynteye/left_rect/image_rect_color /rosout_agg /imu/data /imu/nav_sat_fix /rtabmap/grid_map  /rtabmap/odom /rtabmap/odom_info /rtabmap/cloud_ground /rtabmap/cloud_map /rtabmap/cloud_obstacles 
 
 
