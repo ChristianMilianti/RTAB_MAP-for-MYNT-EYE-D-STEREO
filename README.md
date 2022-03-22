@@ -98,3 +98,43 @@ roslaunch rtabmap_ros rtabmap.launch    stereo:=true    left_image_topic:=/mynte
 
 
 
+for 2022 team: use the following ros instructions
+
+roscore
+
+------NEW TERMINAL TAB-----
+
+cd Documents/MYNT-EYE-D-SDK && source ./wrappers/ros/devel/setup.bash && roslaunch mynteye_wrapper_d RTAB_mynteye_backup.launch
+
+------NEW TERMINAL TAB-----
+
+1877  sudo chmod 666 /dev/ttyUSB0
+and then write rmit as the password
+
+roslaunch sbg_driver sbg_ellipseN.launch
+
+------NEW TERMINAL TAB-----
+
+roslaunch darknet_ros_3d darknet_ros_3d_beijing.launch
+
+------NEW TERMINAL TAB-----
+
+roslaunch darknet_ros_3d darknet_ros_3d.launch
+
+------NEW TERMINAL TAB-----
+
+roslaunch rtabmap_ros rtabmap.launch stereo:=true left_image_topic:=/mynteye/left_rect/image_rect_color right_image_topic:=/mynteye/right_rect/image_rect_color left_camera_info_topic:=/mynteye/left_rect/camera_info right_camera_info_topic:=/mynteye/right_rect/camera_info frame_id:=mynteye_link_frame gps_topic:=/imu/nav_sat_fix rtabmap_args:="-d"
+
+------NEW TERMINAL TAB-----
+
+rosbag record rosout tf /darknet_ros_3d/bounding_boxes /mynteye/left_rect/image_rect_color /rosout_agg /imu/data /imu/nav_sat_fix /rtabmap/grid_map /rtabmap/odom /rtabmap/odom_info /rtabmap/cloud_ground /rtabmap/cloud_map /rtabmap/cloud_obstacles
+
+then go to matlab and run the map generation script (note, there are a few different scripts available to run, but i believe the bottom one is the most recent one which also gives the acceleration graph vs time which i think is accuratish)
+
+map_generator_universal_efficient_withimudata
+
+remember to run 'rosshutdown' in matlab command line when the rosbag has finished running.
+
+
+
+
