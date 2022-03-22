@@ -108,8 +108,9 @@ cd Documents/MYNT-EYE-D-SDK && source ./wrappers/ros/devel/setup.bash && roslaun
 
 ------NEW TERMINAL TAB-----
 
-1877  sudo chmod 666 /dev/ttyUSB0
-and then write rmit as the password
+sudo chmod 666 /dev/ttyUSB0
+
+--- and then write rmit as the password --- and in the same terminal do the commmand below- note, that launch file is already configured to work with rtk, dont lose it. if there is no rtk it will automatically revert to non rtk.
 
 roslaunch sbg_driver sbg_ellipseN.launch
 
