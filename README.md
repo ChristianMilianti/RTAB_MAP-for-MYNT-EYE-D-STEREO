@@ -98,7 +98,7 @@ roslaunch rtabmap_ros rtabmap.launch    stereo:=true    left_image_topic:=/mynte
 
 
 
-for 2022 team: use the following ros instructions
+# For 2022 team: use the following ros instructions
 
 roscore
 
