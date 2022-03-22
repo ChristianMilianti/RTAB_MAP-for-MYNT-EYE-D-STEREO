@@ -129,9 +129,11 @@ roslaunch rtabmap_ros rtabmap.launch stereo:=true left_image_topic:=/mynteye/lef
 
 rosbag record rosout tf /darknet_ros_3d/bounding_boxes /mynteye/left_rect/image_rect_color /rosout_agg /imu/data /imu/nav_sat_fix /rtabmap/grid_map /rtabmap/odom /rtabmap/odom_info /rtabmap/cloud_ground /rtabmap/cloud_map /rtabmap/cloud_obstacles
 
+--- Go to MATLAB ------
+
 then go to matlab and run the map generation script (note, there are a few different scripts available to run, but i believe the bottom one is the most recent one which also gives the acceleration graph vs time which i think is accuratish)
 
-map_generator_universal_efficient_withimudata
+"map_generator_universal_efficient_withimudata" - this script can be found in /home/rmitdriverless/Documents/ChristianMilianti/MATLAB code from 2021 team_backedtossd/map_generator_universal_efficient_withimudata.m
 
 remember to run 'rosshutdown' in matlab command line when the rosbag has finished running.
 
